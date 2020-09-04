@@ -1,0 +1,9 @@
+{
+    "type": "button",
+    "action": {
+        "type": "postback",
+        "label": "Choice 1",
+        "data": "hello 1",
+        "displayText": "A"
+    }
+}

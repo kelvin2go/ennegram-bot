@@ -1,0 +1,44 @@
+{
+    "type": "bubble",
+    "body": {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+            {
+                "type": "text",
+                "text": "Question # of 144",
+                "weight": "bold",
+                "size": "xl"
+            },
+            {
+                "type": "box",
+                "layout": "vertical",
+                "margin": "lg",
+                "spacing": "sm",
+                "contents": [
+                    {
+                        "type": "button",
+                        "action": {
+                            "type": "postback",
+                            "label": "Choice 1",
+                            "data": "hello 1",
+                            "displayText": "A"
+                        }
+                    },
+                    {
+                        "type": "button",
+                        "action": {
+                            "type": "postback",
+                            "label": "Choice 2",
+                            "data": "hello 2",
+                            "displayText": "B"
+                        }
+                    }
+                ]
+            },
+            {
+                "type": "filler"
+            }
+        ]
+    }
+}
