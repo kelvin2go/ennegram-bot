@@ -1,0 +1,22 @@
+{
+    "type": "box",
+    "layout": "baseline",
+    "spacing": "sm",
+    "contents": [
+        {
+            "type": "text",
+            "text": "Date",
+            "color": "#aaaaaa",
+            "size": "lg",
+            "flex": 2
+        },
+        {
+            "type": "text",
+            "text": "Monday 25, 9:00PM",
+            "wrap": true,
+            "size": "sm",
+            "color": "#666666",
+            "flex": 4
+        }
+    ]
+}

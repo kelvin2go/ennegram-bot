@@ -1,6 +1,5 @@
 const ennegram = require('../data/charactors-9.json');
-const question = require('../template/line/bubble.json');
-const button = require('../template/line/button.json');
+const TEMPLATE = require('../template/line');
 const axios = require('axios');
 
 const LINE_TOKEN = process.env.LINE_ACCESS_TOKEN;
@@ -14,9 +13,9 @@ function askQuestion(numberOfQuestion = 0) {
   for (const question in ennegramData[numberOfQuestion]) {
     // console.log(`${question}: ${ennegramData[numberOfQuestion][question]}`);
     let newButton = {
-      ...button,
+      ...TEMPLATE.BUTTON,
       action: {
-        ...button.action,
+        ...TEMPLATE.BUTTON.action,
         label: `${question.length > 12 ? i : question}`,
         displayText: `${numberOfQuestion + 1}: ${question}`,
         data: JSON.stringify({
@@ -39,11 +38,11 @@ function askQuestion(numberOfQuestion = 0) {
     i++;
   }
   const title = {
-    ...question.body.contents[0],
+    ...TEMPLATE.BUBBLE.body.contents[0],
     text: `Q${numberOfQuestion + 1} of 144`,
   };
 
-  let response = Object.assign(question);
+  let response = Object.assign(TEMPLATE.BUBBLE);
   response.body.contents[0] = title;
   response.body.contents[1].contents = newContents;
   // console.log("RES", response)

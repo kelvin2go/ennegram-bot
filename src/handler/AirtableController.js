@@ -101,6 +101,7 @@ const AIRTABLE = {
   getProfile,
   addProfile,
   addAnswer,
+  getAnswer,
 };
 
 module.exports = AIRTABLE;
